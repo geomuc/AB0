@@ -1,0 +1,17 @@
+version: '3'
+services:
+  webserver:
+    build: ./webserver
+    container_name: webserver
+    ports:
+     - "3003:8080"
+  secflask:
+    build: ./secflask
+    container_name: secflask
+    ports:
+     - "3083:8080"
+  aboapi:
+    build: ./aboapi
+    container_name: aboapi
+    ports:
+     - "4000:8080"
