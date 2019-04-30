@@ -10,10 +10,10 @@ app = Flask(__name__)
 CORS(app)
 logging.getLogger('flask_cors').level = logging.DEBUG
 basedir = os.path.abspath(os.path.dirname(__file__))
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'person.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'person.db')
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://test:test@localhost:5433/abodb'
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost:15333/postgres'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@abodb.abo.svc.cluster.local:5432/postgres'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@abodb.abo.svc.cluster.local:5432/postgres'
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
