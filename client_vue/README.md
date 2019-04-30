@@ -1,8 +1,3 @@
-# login_einfach
-
-> A Vue.js project 
-gebaut nach:
-https://www.thepolyglotdeveloper.com/2018/04/simple-user-login-vuejs-web-application/
 
 ## Build Setup
 
